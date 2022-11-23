@@ -1,4 +1,4 @@
-body {
+    /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,120 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 22px;
+    }
+    
+    body {
+        min-height: 100vh;
+        font-family: 'Courier New', monospace;
+        /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    }
+    
+    .App {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        max-width: 500px;
+        margin: auto;
+        height: calc(100vh-2px);
+    }
+    
+    header {
+        width: 100%;
+        padding: 0 0.25em;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        place-content: center;
+    }
+    
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+    }
+    
+    footer {
+        place-content: center;
+        display: grid;
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding: 0.25em;
+    }
+    
+    ul {
+        width: 100%;
+        list-style: none;
+        padding: 0 0.25rem 0.25rem;
+    }
+    
+    ul li::before {
+        content: "\200B";
+    }
+    
+    .item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: lightgray;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        margin: 0.25rem 0;
+    }
+    
+    .item:first-child {
+        margin: 0;
+    }
+    
+    .item input[type="checkbox"] {
+        text-align: center;
+        width: 2.5rem;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        height: 2.5rem;
+        min-height: 48px;
+        cursor: pointer;
+        margin-right: 0.5rem;
+    }
+    
+    .item input[type="checkbox"]:focus+label {
+        text-decoration: underline;
+    }
+    
+    .item>label {
+        font-size: 0.75rem;
+        flex-grow: 1;
+    }
+    
+    .item svg {
+        width: 48px;
+        min-width: 48px;
+        height: 36px;
+        font-size: 1rem;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .item svg:focus,
+    .item svg:hover {
+        color: red;
+        outline: none;
+    }
